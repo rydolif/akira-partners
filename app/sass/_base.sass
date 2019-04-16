@@ -2,14 +2,13 @@
 
 
 //----------------------fonts---------------------
-$fonts: 'GothamPro', sans-serif
-// $fw: 'Font Awesome 5 Brands', sans-serif
+$fonts: 'Montserrat', sans-serif
 //---------------------end-fonts---------------------
 
 //----------------------color---------------------
-$accent: #000
-$text: #000
-$btn: #666
+$accent: #4cddee
+$text: #353535
+$dark: #1e53a6
 $title: #333
 
 //---------------------end-color---------------------
@@ -34,13 +33,31 @@ a, div, ul, li, input, textarea
 		outline: none
 
 section
+	position: relative
 	overflow: hidden
 	
 h1, h2, h3, h4, h5, h6
-	font-weight: 700
-	line-height: 1.4
+	font-weight: 800
+	line-height: 1.2
 	margin: 0
 	padding: 0
+
+
+h1
+	font-size: 55px
+	text-transform: uppercase
+	color: #fff
+	text-align: right
+	margin-bottom: 65px
+
+	span
+		font-size: 65px
+		color: $accent
+
+h2
+	font-size: 30px
+	color: $dark
+	text-transform: uppercase
 
 ul
 	margin: 0
@@ -53,13 +70,12 @@ i
 	color: #fff
 
 input, textarea
-	border: #000 1px solid
-	border-radius: 0
+	width: 100%
+	border-radius: 20px
+	border: 1px solid #acacac
 	outline: none
 	box-shadow: none
 	-webkit-appearance: none
-	width: 100%
-	height: 50px
 	
 	&:focus:required:invalid
 		border-color: red
@@ -74,27 +90,31 @@ input, textarea
 		-webkit-appearance: none
 
 	&::placeholder
-		color: #000
+		color: #c4c4c4
+		font-size: 12px
+		line-height: 50px
 
 input
 	height: 50px
 	line-height: 50px
+	padding: 0 25px
 
 	&::placeholder
 		line-height: 50px
 
+	&:-moz-placeholder /* Firefox 18- */
+	&:-ms-input-placeholder /* IE 10+ */
+	&::-moz-placeholder /* Firefox 19+ */
+	&::-webkit-input-placeholder /* Chrome/Opera/Safari */
+		line-height: 50px
 
-input::-webkit-input-placeholder /* Chrome/Opera/Safari */
-  line-height: 50px
-  
-input::-moz-placeholder /* Firefox 19+ */
-  line-height: 50px
+textarea
+	line-height: 1.2
+	padding: 20px 25px
+	height: 205px
 
-input:-ms-input-placeholder /* IE 10+ */
-  line-height: 50px
-
-input:-moz-placeholder /* Firefox 18- */
-  line-height: 50px
+	&::placeholder
+		line-height: 1.2
 
 textarea
 	&::placeholder

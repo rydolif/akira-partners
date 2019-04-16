@@ -2,19 +2,70 @@
 @import "base"
 
 
+.parallax
+	position: absolute
+	z-index: -1
+	transform: translate(-50%, -50%)
+
+	&--sped
+		&-seven
+			animation: parallax 20s linear infinite
+			
+		&-six
+
+			animation: parallax 50s linear infinite
+
+		&-five
+			animation: parallax 40s ease-in infinite
+
+		&-four
+			animation: parallax 30s ease-in infinite
+
+	&--position
+		&-seven
+			left: 90%
+			top: 15%
+
+		&-six
+			top: 65%
+			left: 95%
+
+		&-five
+			top: 50%
+			left: 5%
+
+		&-four
+			top: 15%
+			left: 5%
+
+		&-three
+			top: 4%
+			left: 5%
+
+
+.fixed
+	background-color: $dark
+	box-shadow: 2px 3px 24px rgba(27, 76, 151, 0.26)
+	text-align: center
+	padding: 15px
+	color: #fff
+	font-size: 16px
+
+
 .header
 	position: fixed
+	top: 52px
 	right: 0
 	left: 0
-	background-color: rgba(0, 0, 0, .5)
 	padding: 15px 0
-	transition: all .3s
+	transition: all .4s
 	z-index: 1001
 
 	&--active, &--menu
-		background-color: rgba(0, 0, 0, .8)
-		padding: 5px 0
-
+		top: 0 !important
+		background-color: rgba($dark, .95)
+		padding: 10px 0
+		box-shadow: 0 0 10px 0 rgba(#000, .3)
 
 	&__container
 		position: relative
@@ -23,9 +74,80 @@
 		align-items: center
 
 
-.main
-	padding: 400px 0
-	
+	&__block
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+		line-height: 1.2
+
+		a
+			position: relative
+			z-index: 1
+			font-weight: 700
+			transition: all .6s
+
+			&::before
+				content: ''
+				width: 0
+				transform: scale(0)
+				transition: all .6s
+				position: absolute
+				bottom: 0
+				width: 100%
+				height: 1px
+				background-color: $accent
+				z-index: -1
+
+			&:hover,
+			&:focus
+				color: $accent
+				text-decoration: none
+				&::before
+					transform: scale(1)
+
+	&__info
+		position: relative
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding-bottom: 15px
+		border-bottom: 1px solid #fff
+
+		&_item
+			position: relative
+			padding-left: 50px
+
+			a,
+			span
+				font-weight: 700
+				color: $accent
+
+			span
+				font-weight: 300
+
+			div
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translate(0, -50%)
+				border-radius: 50%
+				width: 45px
+				height: 45px
+				background: rgba(#fff, .42)
+
+			img
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+
+	&__nav
+		padding-top: 22px
+		
+		a
+			color: #fff
+
+
 .nav
 	ul
 		display: flex
@@ -35,17 +157,523 @@
 		margin-right: 55px
 		&:last-child
 			margin-right: 0
+	
+	&__info
+		display: none
+		background-size: cover
+
+
+.hero
+	padding: 255px 0 190px
+
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		left: 0
+		height: 747px
+		width: 100%
+		background-image: linear-gradient(to left, #2d418b 0%, #9247c3 50%, #d53ccb 100%)
+		z-index: -2
+
+	&__bg
+		position: absolute
+		right: 0
+		left: 0
+		top: 0
+		bottom: 0
+		z-index: -2
+
+		img
+			position: absolute
+			left: 50%
+			top: 0
+			transform: translate(-50%, 0)
+			z-index: -1
+			animation-name: fadein
+			animation-duration: 6s
+			animation-iteration-count: infinite
+
+			&:nth-child(1)
+				animation-delay: 0s
+			&:nth-child(2)
+				animation-delay: 3s
+			&:nth-child(3)
+				animation-delay: 6s
+
+
+	&__sub-title
+		font-size: 30px
+		color: #fff
+		text-align: right
+		font-weight: 500
+		margin-bottom: 75px
+	
+	&__btn
+		display: flex
+		justify-content: flex-end
+		align-items: center
+
+		img
+			margin-right: 35px
+			animation: arrow 1s ease-in infinite
+
+
+.mobile
+	padding-top: 70px
+
+	&::before
+		content: ''
+		position: absolute
+		bottom: 25px
+		width: 100%
+		height: 1000px
+		background-image: url(../img/mobile-bg.png)
+		background-position: center
+		background-repeat: no-repeat
+		z-index: -1
+
+	&::after
+		content: ''
+		position: absolute
+		bottom: 135px
+		height: 783px
+		width: 100%
+		background: #c538cb
+		z-index: -2
+
+	h2
+		margin-bottom: 100px
+		color: $accent
+		text-align: right
+
+		&::before
+			content: 'программы'
+			position: absolute
+			right: 0
+			opacity: 0.12
+			color: #d2d2d2
+			font-size: 150px
+			font-weight: 800
+			line-height: 36px
+			text-decoration: line-through
+			text-transform: uppercase
+
+	&__container
+		position: relative
+
+	&__title
+		position: relative
+		color: #1e53a6
+		font-weight: 500
+		font-size: 40px
+		line-height: 1.1
+		margin-bottom: 105px
+
+		&::before
+			content: url(../img/mobile-arrow.png)
+			position: absolute
+			top: 110%
+			left: 0
+
+		b, strong
+			font-weight: 900
+			text-transform: uppercase
+
+	&__block
+		width: 50%
+		margin-bottom: 180px
+
+		&_gadget
+			position: absolute
+			right: 0
+			top: 0
+			top: -95px
+
+		&_qr
+			display: block
+			margin: 0 auto
+			box-shadow: 0 0 10px 5px rgba(0,0,0, .3)
+	
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 170px
+
+		&_item
+			position: relative
+			width: 32%
+			padding: 50px 25px 80px
+			text-align: center
+			transition: all .6s
+			border: 1px solid #fff
+			border-radius: 10px
+
+			&:hover
+				box-shadow: 0 0 24px rgba(0, 0, 0, 0.48)
+				background-color: #a545c7
+				border: 1px solid #a545c7
+
+				.btn
+					bottom: -25px
+					opacity: 1
+
+				p, h3
+					color: $accent
+
+				svg
+					fill: $accent
+
+			h3
+				text-transform: uppercase
+				font-size: 25px
+
+			p, h3, svg
+				transition: all .6s
+
+			p, h3
+				color: #fff
+
+			p
+				margin-bottom: 45px
+				font-size: 18px
+
+			svg
+				max-width: 105px
+				max-height: 100px
+				fill: #fff
+				margin: 0 auto 30px
+
+			.btn
+				position: absolute
+				bottom: 0
+				right: 0
+				left: 0
+				margin: 0 auto
+				opacity: 0
+				max-width: 230px
+
+	&__btn
+		display: flex
+		justify-content: center
+
+		.btn
+			position: relative
+			max-width: 330px
+			width: 100%
+
+			&::before
+				content: url(../img/mobile-arrow-btn.png)
+				position: absolute
+				right: -70px
+				bottom: 40px
+
+
+.about
+	padding-top: 100px
+	padding-bottom: 380px
+	background-image: url(../img/about-bg.png)
+	background-position: center bottom
+	background-repeat: no-repeat
+
+	h2
+		margin-bottom: 60px
+
+		&::before
+			content: 'о нас'
+			position: absolute
+			left: 0
+			opacity: 0.14
+			color: #d2d2d2
+			font-size: 150px
+			font-weight: 800
+			line-height: 36px
+			text-decoration: line-through
+			text-transform: uppercase
+
+	h3
+		position: relative
+		font-size: 60px
+		font-weight: 700
+		line-height: .7
+		text-transform: uppercase
+		color: $accent
+		margin-bottom: 25px
+
+		&::before
+			content: ''
+			position: absolute
+			left: 50%
+			bottom: -12px
+			transform: translate(-50%, 0)
+			width: 50px
+			height: 1px
+			background: $accent
+
+	&__list
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		margin-bottom: 45px
+
+		&_item
+			width: 20%
+			text-align: center
+
+			p
+				text-transform: uppercase
+
+	&__text
+		font-size: 16px
+		color: #1a1a1a
+		line-height: 1.1
+
+
+.why
+	padding-top: 70px
+	padding-bottom: 90px
+
+	h2
+		text-align: right
+
+		&::before
+			content: 'почему мы'
+			position: absolute
+			right: 0
+			opacity: 0.12
+			color: #d2d2d2
+			font-size: 150px
+			font-weight: 800
+			line-height: 36px
+			text-decoration: line-through
+			text-transform: uppercase
+
+	h3
+		font-size: 20px
+		color: $accent
+		text-transform: uppercase
+
+	p
+		font-size: 16px
+		text-align: left
+
+	&__list
+		position: relative
+		display: flex
+		justify-content: space-between
+		margin-bottom: 80px
+		z-index: 1
+
+		&::before
+			content: ''
+			position: absolute
+			top: 15px
+			height: 1px
+			width: 100%
+			border-bottom: 1px dashed $accent
+			z-index: -1
+
+		&_item
+			width: 23%
+			text-align: center
+
+			h3
+				display: inline-block
+				background: #fff
+				font-size: 30px
+				font-weight: 800
+				margin-bottom: 35px
+				padding: 0 10px
+				line-height: 1
+
+	&__block
+		position: relative
+		display: flex
+		flex-direction: column
+		justify-content: center
+		height: 100%
+
+		&--two
+			justify-content: space-around
+
+		h3
+			margin-bottom: 20px
+			line-height: 1.4
+
+		div
+			position: relative
+
+		&_number
+			position: absolute
+			top: 50%
+			right: 0
+			transform: translate(0, -50%)
+			opacity: 0.2
+			color: #d2d2d2
+			font-size: 300px
+			line-height: .6
+			font-weight: 800
+			text-transform: uppercase
+
+			&--left
+				right: auto
+				left: 0
+
+	&__btn
+		display: flex
+		justify-content: center
+
+		.btn
+			max-width: 330px
+			width: 100%
+
+	&__img
+		display: block
+		margin-left: -15px
+
+
+.training
+	padding-top: 20px
+	padding-bottom: 80px
+
+	h2
+		margin-bottom: 120px
+
+		&::before
+			content: 'обучение'
+			position: absolute
+			left: 0
+			opacity: 0.14
+			color: #d2d2d2
+			font-size: 150px
+			font-weight: 800
+			line-height: .5
+			text-decoration: line-through
+			text-transform: uppercase
+
+	&__btn
+		display: flex
+		justify-content: center
+
+		.btn
+			max-width: 330px
+			width: 100%
+			padding: 0 10px
+
+	&__slider
+		overflow: initial
+
+	&__slide
+		padding: 0 15px
+	
+	.slick-slide
+		z-index: -1
+
+		img
+			animation: slide-hover-back .6s linear 1 forwards
+			transition: all .6s
+
+		&:hover,
+		&:focus
+			z-index: 2
+
+			img
+				animation: slide-hover .6s linear 1 forwards
+				box-shadow: 7px 9px 8px rgba(0, 0, 0, 0.31)
+
+		img
+			width: 100%
+
+	.slick-list
+		overflow: visible
+
+	.slick-dotted.slick-slider
+		margin-bottom: 140px
+
+	.slick-dots
+		bottom: -100px
+
+	.slick-dots
+		li
+			width: 14px
+			height: 14px
+
+			button
+				background-color: #f43ddb
+				opacity: 0.28
+				border-radius: 50%
+				width: 8px
+				height: 8px
+
+				&::before
+					display: none
+
+		.slick-active button
+			width: 14px
+			height: 14px
+			opacity: 1
+
+
+.call
+	position: relative
+	padding-left: 70px
+
+	a
+		color: #fff
+		text-transform: uppercase
+
+		&::before
+			height: 1px
+			width: 100%
+			bottom: -1px
+
+	&__absolute
+		position: absolute
+		top: 50%
+		left: 0
+		transform: translate(0, -50%)
+		width: 55px
+		height: 52px
+		box-shadow: 0 0 9px rgba(0, 0, 0, 0.3)
+		border-radius: 20px
+		background-color: rgba(255, 255, 255, 0.41)
+
+		svg
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			fill: #fff
+			width: 39px
+			height: 39px
+
+		&--tel
+			svg
+				animation: call 1s linear infinite
+
+
+.footer
+	padding-top: 35px
+	padding-bottom: 45px
+	background-image: linear-gradient(to right, #f43ddb 0%, #9247c3 50%, #1e53a6 100%)
+
+	p, a
+		display: inline-block
+		color: #fff
 
 	a
 		position: relative
 		z-index: 1
-		text-transform: uppercase
+		font-weight: 700
+		transition: all .6s
 
 		&::before
 			content: ''
 			width: 0
 			transform: scale(0)
-			transition: all .3s
+			transition: all .6s
 			position: absolute
 			bottom: 0
 			width: 100%
@@ -60,9 +688,80 @@
 			&::before
 				transform: scale(1)
 
+	h3
+		margin-bottom: 35px
+		font-size: 16px
+		color: $accent
+		text-transform: uppercase
 
-.footer
-	height: 1000px
+	.active
+		&::before
+			transform: scale(1) !important
+
+	&__logo
+		display: block
+		fill: $accent
+		margin-bottom: 25px
+
+		&::before
+			display: none
+
+		svg
+			width: 160px
+			height: 55px
+
+	&__line
+		width: 100%
+		height: 1px
+		background: #fff
+		margin: 40px 0
+
+	&__list
+		li
+			margin-bottom: 15px
+
+			&:last-child
+				margin-bottom: 0
+
+	&__soc
+		display: flex
+
+		a
+			margin-right: 10px
+			&::before
+				display: none
+
+		svg
+			width: 26px
+			height: 26px
+			fill: #fff
+			animation: hover-back .6s linear 1 forwards
+
+			&:hover
+				animation: hover .6s linear 1 forwards
+
+	&__call
+		padding-left: 70px
+		margin-bottom: 25px
+
+		a
+			padding: 3px 0
+
+			&::before
+				bottom: 2px
+		
+		.call__absolute
+			right: auto
+			left: 0
+
+	&__link
+		margin-bottom: 15px
+
+		&::before
+			bottom: -2px
+			height: 1px
+			width: 100%
+
 
 
 @import "page"

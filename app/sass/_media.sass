@@ -1,10 +1,114 @@
 
 @media only screen and (max-width : 1200px)
 
+	.parallax
+		display: none
+
+	.fixed
+		padding: 5px 15px
+
 	.header
+		top: 32px
+
+		&__logo
+			width: 170px
+			margin-right: 5px
+
+			img
+				width: 100%
+				height: auto
+
+	.nav li
+		margin-right: 25px
+
+	h1
+		font-size: 44px
+
+		span
+			font-size: 44px
+
+	.hero
+		padding-top: 155px
+		padding-bottom: 100px
+
+		&__bg img
+			transform: translate(-33%,0)
+
+		&__media
+			background: rgba($dark, .8)
+			padding: 30px
+			border-radius: 30px
+
+	.mobile
+		h2
+			margin-bottom: 75px
+
+		&__title
+			font-size: 32px
+
+		&__block_gadget
+			width: 75%
+
+		&__list
+			margin-bottom: 90px
+
+			&_item
+				padding: 50px 25px
+
+				h3
+					font-size: 20px
+
+				p, svg
+					margin-bottom: 20px
+
+	.about
+		padding-top: 65px
+
+	.why
+		&__list
+			margin-bottom: 50px
+
+		&__block
+			h3
+				font-size: 18px
+				line-height: 1.2
+
+		img
+			width: 100%
+			margin-bottom: 20px
+
+
+	.training h2
+		margin-bottom: 70px
 
 
 @media only screen and (max-width : 992px)
+	
+	h2
+		margin-bottom: 30px !important
+		font-size: 26px
+
+		&::before
+			display: none
+
+	.header
+		padding: 10px 0
+
+
+		&--active, &--menu
+			padding: 5px 0
+
+		&__info
+			border: none
+			padding-right: 70px
+			padding-bottom: 0
+
+			&_item
+				margin-right: 15px
+
+				&:nth-child(1),
+				&:nth-child(2)
+					display: none
 
 	.nav
 		position: fixed
@@ -13,21 +117,23 @@
 		height: 100%
 		flex-direction: column
 		right: -100%
-		top: 80px
+		top: 70px
 		z-index: -1
-		background: rgba(0, 0, 0, .9)
+		background-color: rgba($dark, .95)
 		transition: all .3s
 
 		ul
 			display: flex
 			flex-direction: column
 			justify-content: center
-			margin-top: 40px
-			margin-left: 40px
+			margin: 40px
 
 		li
 			margin: 0
-			margin-bottom: 10px
+			margin-bottom: 15px
+
+			&:last-child
+				margin-bottom: 0
 
 		a
 			color: #fff
@@ -35,25 +141,370 @@
 		&--active
 			right: 0
 
+		&__info
+			display: block !important
+			margin: 30px
+
 	.hamburger
 		display: block
 
+	h1
+		margin-bottom: 40px
+
+	.hero
+		padding-top: 120px
+		padding-bottom: 60px
+
+		&__sub-title
+			margin-bottom: 40px
+
+		&__bg img
+			transform: translate(-28%,0)
+
+		.btn
+			max-width: 320px
+
+	.mobile
+
+		&::before
+			height: 700px
+
+		&:after
+			display: none
+
+		&__title
+			font-size: 22px
+			margin-bottom: 40px
+
+			&::before
+				display: none
+
+		&__block
+			margin-bottom: 95px
+
+			&_gadget
+				top: -45px
+				width: 60%
+
+			&_qr
+				width: 50%
+
+		&__list_item
+			padding: 35px 25px
+
+			h3
+				font-size: 18px
+
+			p
+				font-size: 14px
+
+			svg
+				max-width: 70px
+				max-height: 70px
+	
+	.about
+		h3
+			font-size: 44px
+
+		&__list_item p
+			font-size: 12px
+
+	.why
+		padding: 40px 0
+
+		p
+			font-size: 14px
+
+		&__list
+			flex-wrap: wrap
+
+			&::before
+				display: none
+
+			&_item
+				position: relative
+				width: 48%
+				margin-bottom: 15px
+
+				&::before
+					content: ''
+					position: absolute
+					left: 0
+					top: 15px
+					height: 1px
+					width: 100%
+					border-bottom: 1px dashed $accent
+					z-index: -1
+
+				h3
+					margin-bottom: 10px
+
+		img
+			width: 50%
+			margin: 0 auto 15px
+
+		.col-md-6
+			img
+				display: block
+				width: auto
+				height: 290px
+
+		&__block
+			margin-bottom: 15px
+
+			h3
+				margin-bottom: 15px
+				font-size: 16px
+
+			&_number
+				font-size: 170px
+
+	.training
+		padding-bottom: 40px
+
+	//----------------hover-img---------------
+	@keyframes slide-hover
+		0%
+			transform: scale(1)
+		100%
+			transform: scale(1.1)
+
+	@keyframes slide-hover-back
+		0%
+			transform: scale(1.1)
+		100%
+			transform: scale(1)
+
+	.footer
+		&__line
+			margin: 10px 0
+
+		h3
+			margin-bottom: 25px
 
 
 @media only screen and (max-width : 767px)
-	.header
+	h1
+		font-size: 34px
+		span
+			font-size: 34px
+
+	h2
+		font-size: 22px
+
+	.fixed
+		font-size: 12px
+
+	.hero
+		&__media
+			padding: 20px
+
+		&__sub-title
+			font-size: 18px
+
+
+		&__btn img
+			width: 50px
+
+	.mobile
+		&::before
+			height: 730px
+
+		&__title
+			font-size: 18px
+			margin-bottom: 20px
+
+			br
+				display: none
+
+		&__block
+			margin-bottom: 50px
+
+		&__list
+			justify-content: space-around
+			flex-wrap: wrap
+
+			&_item
+				width: 48%
+				margin-bottom: 15px
+	
+	.about
+		&__list
+			justify-content: space-around
+			margin-bottom: 25px
+
+			&_item
+				width: 30%
+				margin-bottom: 15px
+
+		&__text
+			font-size: 14px
+
+	.footer
+		text-align: center
+
+		&_line
+			margin: 10px 0
+
+		&__logo
+			margin-bottom: 0
+
+		&__list
+			margin-bottom: 30px
+
+		&__copy
+			margin-bottom: 20px
+
+		&__soc
+			justify-content: center
+			margin-bottom: 20px
+
+		&__call
+			text-align: left
+			width: 240px
+			margin: 0 auto 20px
+
+			a
+				display: block
+
 
 @media only screen and (max-width : 576px)
+	h1
+		font-size: 30px
+		span
+			font-size: 30px
+	
 	.header
+		top: 24px
+
+	.hero
+		&__btn
+			img
+				display: none
+
+	.modal
+		width: 90%
+		padding: 30px
+
+	.fixed
+		font-size: 10px
+
 
 @media only screen and (max-width : 480px)
+	h1
+		font-size: 24px
+		margin-bottom: 25px
+
+		span
+			font-size: 24px
+
+	.btn
+		font-size: 12px
+		width: 100%
+
+	.fixed
+		display: none
+
 	.header
+		top: 0
+
+		&__logo
+			width: 90px
+
+			img
+				width: 90px
+
+		&__info
+			padding-right: 60px
+
+			&_item
+				padding-left: 30px
+				margin-right: 0
+
+				div
+					width: 25px
+					height: 25px
+
+					img
+						width: 60%
+						height: 60%
+
+	.nav
+		top: 42px
+
+	.hero
+		padding-top: 70px
+		padding-bottom: 40px
+
+		&__media
+			padding: 10px
+
+		&__bg
+			width: 600px
+			left: 0
+			top: 40%
+
+			img
+				width: 600px
+				left: 50%
+				transform: translate(-50%, 0)
+
+		&__sub-title
+			margin-bottom: 25px
+	
+	h2
+		font-size: 20px
+
+	.mobile
+		&__block
+			margin-bottom: 25px
+	
+		&__list
+			margin-bottom: 15px
+
+			&_item
+				width: 100%
+				margin-bottom: 30px
+				box-shadow: 0 0 24px rgba(0, 0, 0, 0.48)
+				background-color: #a545c7
+				border: 1px solid #a545c7
+
+				.btn
+					bottom: -25px
+					opacity: 1
+
+				p, h3
+					color: $accent
+
+				svg
+					fill: $accent
+
+		&__btn
+
+			.btn
+				&::before
+					display: none
 
 
+	.about__list_item
+		width: 48%
 
+	.why
+		img
+			width: 70%
 
+		&__list_item
+			width: 100%
 
+		.col-md-6 img
+			height: 250px
 
+	.training
+		.slick-dotted.slick-slider
+			margin-bottom: 60px
 
+		.slick-dots
+			bottom: -40px
 
-
+		&__slide
+			padding: 0 5px
