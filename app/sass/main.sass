@@ -61,11 +61,15 @@
 	transition: all .4s
 	z-index: 1001
 
+	&--calligraphic
+		background-color: rgba(#374da7, .73)
+		
 	&--active, &--menu
 		top: 0 !important
 		background-color: rgba($dark, .95)
 		padding: 10px 0
 		box-shadow: 0 0 10px 0 rgba(#000, .3)
+
 
 	&__container
 		position: relative
@@ -657,7 +661,7 @@
 .footer
 	padding-top: 35px
 	padding-bottom: 45px
-	background-image: linear-gradient(to right, #f43ddb 0%, #9247c3 50%, #1e53a6 100%)
+	background: #454fb0
 
 	p, a
 		display: inline-block
