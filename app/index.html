@@ -40,7 +40,7 @@
 	<header class="header">
 		<div class="container header__container">
 
-			<a href="index.html" class="header__logo">
+			<a href="/" class="header__logo">
 				<img src="img/logo.svg" alt="logo" width="230" height="78">
 			</a>
 
@@ -60,7 +60,7 @@
 					</div>
 					<div class="header__info_item">
 						<div><img src="img/header-simulators.png" alt=""></div>
-						<a href="#">Тренажеры</a>
+						<a href="trainer.html">Тренажеры</a>
 					</div>
 
 					<button class="hamburger" type="button">
@@ -74,11 +74,11 @@
 				<nav class="header__nav nav">
 
 					<ul>
-						<li><a href="#">ГЛАВНАЯ</a></li>
-						<li><a href="#">О НАС</a></li>
-						<li><a href="#">РАЗВИВАЮЩИЕ ПРОГРАММЫ</a></li>
-						<li><a href="#">СОТРУДНИЧЕСТВО</a></li>
-						<li><a href="#">КОНТАКТЫ</a></li>
+						<li class="click"><a href="#hero">ГЛАВНАЯ</a></li>
+						<li class="click"><a href="#about">О НАС</a></li>
+						<li class="click"><a href="#program">РАЗВИВАЮЩИЕ ПРОГРАММЫ</a></li>
+						<li><a href="https://akira.education/" target="_blank">СОТРУДНИЧЕСТВО</a></li>
+						<li class="click"><a href="#footer">КОНТАКТЫ</a></li>
 					</ul>
 
 					<div class="nav__info header__info_item">
@@ -131,13 +131,20 @@
 
 		<div class="mobile__container container">
 			<div class="mobile__block">
-				<p class="mobile__title">Скачайте <b>мобильное <br>приложение</b> уже сейчас <br>абсолютно <b>бесплатно!</b></p>
+				<p class="mobile__title">
+					Скачайте <b>мобильное 
+					<br>приложение</b> уже сейчас
+					<br>абсолютно
+					<b>
+						<a href="https://play.google.com/store/apps/details?id=com.app_akira.layout" target="_blank">бесплатно!</a>
+					</b>
+				</p>
 				<img src="img/mobile-gadget.png" alt="" class="mobile__block_gadget">
 				<img src="img/qr.png" alt="" class="mobile__block_qr">
 			</div>
 		</div>
 
-		<div class="container">
+		<div class="container" id="program">
 
 			<h2>ПРОГРАММЫ РАЗВИТИЯ ИНТЕЛЛЕКТА</h2>
 
@@ -244,7 +251,7 @@
 				<div class="why__list_item">
 					<h3>2018</h3>
 					<p>
-						Наша сеть выросла до 100 организаций, в которых успешно велась и ведется обучение по нашим методикам. На настоящий момент мы выпустили более 5000 учеников, 800 выпускников - инструкторов, с присутствием в 15 странах мира.
+						Наша сеть выросла до 100 организаций, в которых успешно велось и ведется обучение по нашим методикам. На настоящий момент мы выпустили более 5000 учеников, 800 выпускников - инструкторов, с присутствием в 15 странах мира.
 					</p>
 				</div>
 			</div>
@@ -329,14 +336,36 @@
 			<h2>Добро пожаловать на бесплатный урок!</h2>
 
 			<div class="training__slider swiper-container">
-				<div class="training__slide"><img src="img/gallery/1.jpg" alt=""></div>
-				<div class="training__slide"><img src="img/gallery/2.jpg" alt=""></div>
-				<div class="training__slide"><img src="img/gallery/3.jpg" alt=""></div>
-				<div class="training__slide"><img src="img/gallery/4.jpg" alt=""></div>
-				<div class="training__slide"><img src="img/gallery/5.jpg" alt=""></div>
-				<div class="training__slide"><img src="img/gallery/6.jpg" alt=""></div>
-				<div class="training__slide"><img src="img/gallery/7.jpg" alt=""></div>
-				<div class="training__slide"><img src="img/gallery/8.jpg" alt=""></div>
+				<div class="training__slide">
+					<a href="img/gallery/1big.jpg" data-fancybox="gallery">
+						<img src="img/gallery/1.jpg" alt="">
+					</a>
+				</div>
+				<div class="training__slide">
+					<a href="img/gallery/2big.jpg" data-fancybox="gallery">
+						<img src="img/gallery/2.jpg" alt="">
+					</a>
+				</div>
+				<div class="training__slide">
+					<a href="img/gallery/3big.jpg" data-fancybox="gallery">
+						<img src="img/gallery/3.jpg" alt="">
+					</a>
+				</div>
+				<div class="training__slide">
+					<a href="img/gallery/4big.jpg" data-fancybox="gallery">
+						<img src="img/gallery/4.jpg" alt="">
+					</a>
+				</div>
+				<div class="training__slide">
+					<a href="img/gallery/5big.jpg" data-fancybox="gallery">
+						<img src="img/gallery/5.jpg" alt="">
+					</a>
+				</div>
+				<div class="training__slide">
+					<a href="img/gallery/6big.jpg" data-fancybox="gallery">
+						<img src="img/gallery/6.jpg" alt="">
+					</a>
+				</div>
 			</div>
 
 			<div class="training__btn">
@@ -346,7 +375,7 @@
 		</div>
 	</section>
 	
-	<footer class="footer">
+	<footer class="footer" id="footer">
 		<div class="container">
 			<div class="row justify-content-center">
 
@@ -356,6 +385,7 @@
 					</a>
 					<p>Международная ассоциация <br>Акира Эдукейшн, <br>International Association <br>Akira Education</p>
 					<div class="footer__line"></div>
+					<a href="img/pk.jpg" target="_blank">Политика конфиденциальности</a>
 					<p class="footer__copy">All rights reserved, 2018</p>
 				</div>
 
@@ -363,11 +393,11 @@
 					<h3>меню</h3>
 					<nav>
 						<ul class="footer__list">
-							<li><a href="/">О нас</a></li>
-							<li><a href="#">Развивающие программы</a></li>
-							<li><a href="#">Сотрудничество</a></li>
-							<li><a href="#">Контакты</a></li>
-							<li><a href="#">Тренажеры</a></li>
+							<li><a href="/">ГЛАВНАЯ</a></li>
+							<li class="click"><a href="#about">О НАС</a></li>
+							<li class="click"><a href="#program">РАЗВИВАЮЩИЕ ПРОГРАММЫ</a></li>
+							<li><a href="https://akira.education/" target="_blank">СОТРУДНИЧЕСТВО</a></li>
+							<li class="click"><a href="#footer">КОНТАКТЫ</a></li>
 						</ul>
 					</nav>
 				</div>   
@@ -400,7 +430,7 @@
 						<div class="call__absolute">
 							<svg><use xlink:href="#mail"></use></svg>
 						</div>
-						<a href="mailto:adress@gmail.com"><b>adress@gmail.com</b></a>
+						<a href="mailto:admin@akira.education"><b>admin@akira.education</b></a>
 						<a href="#" class="free_open">Напишите нам</a>
 					</div>
 					<a href="#" class="btn btn--footer free_open">Записаться</a>
@@ -432,7 +462,7 @@
 				<div class="">
 					<button type="submit" class="form__btn btn" name="submit">Отправить</button>
 				</div>
-				<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="#" target="_blank">персональных данных</a></p>
+				<p>Нажимая на кнопку, вы даете согласие <br>на обработку своих <a href="img/pk.jpg" target="_blank">персональных данных</a></p>
 
 			</form>
 		</div>

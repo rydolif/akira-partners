@@ -285,6 +285,10 @@
 			font-weight: 900
 			text-transform: uppercase
 
+		a
+			text-decoration: underline
+			color: #1e53a6
+
 	&__block
 		width: 50%
 		margin-bottom: 180px
@@ -575,17 +579,8 @@
 	.slick-slide
 		z-index: -1
 
-		img
-			animation: slide-hover-back .6s linear 1 forwards
-			transition: all .6s
-
-		&:hover,
-		&:focus
-			z-index: 2
-
-			img
-				animation: slide-hover .6s linear 1 forwards
-				box-shadow: 7px 9px 8px rgba(0, 0, 0, 0.31)
+		a
+			display: block
 
 		img
 			width: 100%

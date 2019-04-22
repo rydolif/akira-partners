@@ -57,7 +57,7 @@ gulp.task('minjs', function() {
 		'app/libs/slick/slick.js', 					//----слайдер
 		 // 'app/libs/flipclock/flipclock.js',
 		// 'app/libs/swiper/swiper.min.js', 			//----слайдер
-		// 'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
+		'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
 		'app/libs/jquery.spincrement.min.js', 		//----цифри анімованні
 		// 'app/libs/isotope.pkgd.min.js', 				//----сетка елементов + фильтр
 		'app/libs/lazy-line-painter/lazy-line-painter-1.9.6.min.js',
@@ -80,7 +80,7 @@ gulp.task('js', function() {
 		'app/libs/slick/slick.js', 					//----слайдер
 		 // 'app/libs/flipclock/flipclock.js',			//----таймер
 		// 'app/libs/swiper/swiper.min.js', 			//----слайдер
-		// 'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
+		'app/libs/fancybox/jquery.fancybox.js', 		//----картінка прикліку
 		'app/libs/jquery.spincrement.min.js', 		//----цифри анімованні
 		// 'app/libs/isotope.pkgd.min.js', 				//----сетка елементов + фильтр
 		'app/libs/lazy-line-painter/lazy-line-painter-1.9.6.min.js',

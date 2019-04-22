@@ -33,6 +33,8 @@ if($('*').is('#about')) {
     arrows: false,
     slidesToShow: 3,
     slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1200,
@@ -125,7 +127,7 @@ if($('*').is('#about')) {
       event.preventDefault();
       var id  = $(this).attr('href'),
           top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top - 60}, 'slow', 'swing');
+      $('body,html').animate({scrollTop: top - 105}, 'slow', 'swing');
   });
 
   
