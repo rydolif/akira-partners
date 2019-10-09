@@ -10822,6 +10822,10 @@ if($('*').is('#about')) {
       }
   });
 
+  if ($(this).scrollTop()>10){
+      $('.header').removeClass('header--active');
+  }
+
 //-------------------------скорость якоря---------------------------------------
   $(".click").on("click","a", function (event) {
       event.preventDefault();
